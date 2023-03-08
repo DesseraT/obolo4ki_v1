@@ -46,6 +46,10 @@ p = 1800
 k = 5 / 6
 
 
+def f(z):
+    return 6 * (1 / 4 - z ** 2 / h ** 2)
+
+
 A = 1
 B = 1
 P_x = 0
@@ -56,12 +60,13 @@ k_y = 1 / R_2
 # define symbol variables
 
 
-fastening = Fastening(a, b, N)
+fastening = Fastening(a, b, N, "hanged-fixed")
 W = fastening.W
 U = fastening.U
 V = fastening.V
 Psi_x = fastening.Psi_x
 Psi_y = fastening.Psi_y
+Phys = Geometrical(W,U,V,Psi_x, Psi_y, A,B,k_x,k_y, k,h)
 Geom = Geometrical(W,U,V,Psi_x, Psi_y, A,B,k_x,k_y, k,h)
 Phys = Physical(Geom, E_1, E_2, mu12, mu21, G_12, G_13, G_23)
 print(Phys.Sigma_I)
