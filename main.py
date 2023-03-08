@@ -2,6 +2,7 @@
 from calc.NewtonMethod import NewtonMethod
 from sympy import *
 from calc.ApproximationType import *
+from calc.Geometrical import *
 # INPUT DATA
 N = 4
 
@@ -55,11 +56,13 @@ k_y = 1 / R_2
 
 # define symbol variables
 
+
 fastening = Fastening(a, b, N, "hanged-fixed")
 W = fastening.W
 U = fastening.U
 V = fastening.V
 Psi_x = fastening.Psi_x
 Psi_y = fastening.Psi_y
-print(W, U, V, Psi_x, Psi_y)
+Phys = Geometrical(W,U,V,Psi_x, Psi_y, A,B,k_x,k_y, k,h)
+print(W)
 #123
