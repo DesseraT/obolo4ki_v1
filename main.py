@@ -2,8 +2,9 @@
 from calc.NewtonMethod import NewtonMethod
 from sympy import *
 from calc.ApproximationType import *
+from calc.Geometrical import *
 # INPUT DATA
-N = 4
+N = 16
 
 h = 0.00022
 a = 0.2
@@ -42,10 +43,6 @@ p = 1800
 k = 5 / 6
 
 
-def f(z):
-    return 6 * (1 / 4 - z ** 2 / h ** 2)
-
-
 A = 1
 B = 1
 P_x = 0
@@ -57,5 +54,6 @@ k_y = 1 / R_2
 x, y = symbols('x y')
 
 W, U, V, Psi_x, Psi_y = hingedFixed(x, y, a, b, N)
-print(W)
+Phys = Physical(W,U,V,Psi_x, Psi_y, A,B,k_x,k_y, k,h)
+print(Phys.Gamma_XY)
 #123
