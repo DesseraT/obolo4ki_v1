@@ -58,3 +58,4 @@ x, y = symbols('x y')
 
 W, U, V, Psi_x, Psi_y = hingedFixed(x, y, a, b, N)
 print(W)
+#123
