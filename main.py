@@ -3,7 +3,7 @@ from calc.NewtonMethod import NewtonMethod
 from sympy import *
 from calc.ApproximationType import *
 # INPUT DATA
-N = 1
+N = 4
 
 h = 0.00022
 a = 0.2
