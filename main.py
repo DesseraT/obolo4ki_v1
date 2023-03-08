@@ -51,9 +51,14 @@ k_x = 1 / R_1
 k_y = 1 / R_2
 
 # define symbol variables
-x, y = symbols('x y')
 
-W, U, V, Psi_x, Psi_y = hingedFixed(x, y, a, b, N)
-Phys = Physical(W,U,V,Psi_x, Psi_y, A,B,k_x,k_y, k,h)
+
+fastening = Fastening(a, b, N)
+W = fastening.W
+U = fastening.U
+V = fastening.V
+Psi_x = fastening.Psi_x
+Psi_y = fastening.Psi_y
+Phys = Geometrical(W,U,V,Psi_x, Psi_y, A,B,k_x,k_y, k,h)
 print(Phys.Gamma_XY)
 #123
