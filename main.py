@@ -55,12 +55,11 @@ k_y = 1 / R_2
 
 # define symbol variables
 
-
-fastening = Fastening(a, b, N)
+fastening = Fastening(a, b, N, "hanged-fixed")
 W = fastening.W
 U = fastening.U
 V = fastening.V
 Psi_x = fastening.Psi_x
 Psi_y = fastening.Psi_y
-print(W)
+print(W, U, V, Psi_x, Psi_y)
 #123
