@@ -3,9 +3,12 @@ from calc.NewtonMethod import NewtonMethod
 from sympy import *
 from calc.ApproximationType import *
 from calc.Geometrical import *
+from calc.Physical import*
 # INPUT DATA
 N = 16
-
+G_13 = 1
+G_23 = 1
+G_12 = 1
 h = 0.00022
 a = 0.2
 b = 0.2
@@ -59,6 +62,7 @@ U = fastening.U
 V = fastening.V
 Psi_x = fastening.Psi_x
 Psi_y = fastening.Psi_y
-Phys = Geometrical(W,U,V,Psi_x, Psi_y, A,B,k_x,k_y, k,h)
-print(Phys.Gamma_XY)
+Geom = Geometrical(W,U,V,Psi_x, Psi_y, A,B,k_x,k_y, k,h)
+Phys = Physical(Geom, E_1, E_2, mu12, mu21, G_12, G_13, G_23)
+print(Phys.Sigma_I)
 #123
