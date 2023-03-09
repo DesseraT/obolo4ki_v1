@@ -4,7 +4,7 @@ class Geometrical:
     def __init__(self,W,U,V,Psi_X,Psi_Y,A,B,Kx,Ky, k, h):
         self.W      = W       
         self.U      = U       
-        self.V      = V       
+        self.V      = V
         self.Psi_X  = Psi_X   
         self.Psi_Y  = Psi_Y   
         self.A      = A       
