@@ -54,15 +54,15 @@ P_y = 0
 k_x = 1 / R_1
 k_y = 1 / R_2
 
-# define symbol variables
+# to choose shell's fastening use "hanged-fixed" / "strict"
+# to set shell's symmetry use "symmetry" / "xAsymmetry" / "yAsymmetry"
 
-
-fastening = Fastening(a, b, N, "hanged-fixed")
+fastening = Fastening(a, b, N, "hinged-fixed","symmetry")
 W = fastening.W
 U = fastening.U
 V = fastening.V
 Psi_x = fastening.Psi_x
 Psi_y = fastening.Psi_y
-Phys = Geometrical(W,U,V,Psi_x, Psi_y, A,B,k_x,k_y, k,h)
+Phys = Geometrical(W, U, V, Psi_x, Psi_y, A, B, k_x, k_y, k, h)
 print(W)
 #123
