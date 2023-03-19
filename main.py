@@ -59,7 +59,7 @@ k_y = 1 / R_2
 # define symbol variables
 
 
-fastening = Fastening(a, b, N, "hanged-fixed")
+fastening = Fastening(a, b, N, "hanged-fixed", "symmetry")
 W = fastening.W
 U = fastening.U
 V = fastening.V

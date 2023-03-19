@@ -43,19 +43,19 @@ class Fastening:
                 v[i][j] = Symbol(f"v[{i},{j}]")
                 psi_x[i][j] = Symbol(f"psi_x[{i},{j}]")
                 psi_y[i][j] = Symbol(f"psi_y[{i},{j}]")
-                if(self.shellSymmetry == "symmetry"):
+                if self.shellSymmetry == "symmetry":
                     self.W += w[i][j] * (sin(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
                     self.U += u[i][j] * (sin(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
                     self.V += v[i][j] * (sin(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
                     self.Psi_x += psi_x[i][j] * (cos(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
                     self.Psi_y += psi_y[i][j] * (sin(i * self.x * pi / self.a)) * (cos(j * self.y * pi / self.b))
-                elif (self.shellSymmetry == "xAsymmetry"):
+                elif self.shellSymmetry == "xAsymmetry":
                     self.W += w[i][j] * (sin(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
                     self.U += u[i][j] * (sin(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
                     self.V += v[i][j] * (sin(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
                     self.Psi_x += psi_x[i][j] * (cos(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
                     self.Psi_y += psi_y[i][j] * (sin(i * self.x * pi / self.a)) * (cos(j * self.y * pi / self.b))
-                elif (self.shellSymmetry == "yAsymmetry"):
+                elif self.shellSymmetry == "yAsymmetry":
                     self.W += w[i][j] * (sin(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
                     self.U += u[i][j] * (sin(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
                     self.V += v[i][j] * (sin(i * self.x * pi / self.a)) * (sin(j * self.y * pi / self.b))
