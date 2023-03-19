@@ -4,8 +4,10 @@ from sympy import *
 from calc.ApproximationType import *
 from calc.Geometrical import *
 # INPUT DATA
-N = 4
-
+N = 16
+G_13 = 1
+G_23 = 1
+G_12 = 1
 h = 0.00022
 a = 0.2
 b = 0.2
@@ -54,15 +56,15 @@ P_y = 0
 k_x = 1 / R_1
 k_y = 1 / R_2
 
-# to choose shell's fastening use "hanged-fixed" / "strict"
-# to set shell's symmetry use "symmetry" / "xAsymmetry" / "yAsymmetry"
+# define symbol variables
 
-fastening = Fastening(a, b, N, "hinged-fixed","symmetry")
+
+fastening = Fastening(a, b, N, "hanged-fixed")
 W = fastening.W
 U = fastening.U
 V = fastening.V
 Psi_x = fastening.Psi_x
 Psi_y = fastening.Psi_y
-Phys = Geometrical(W, U, V, Psi_x, Psi_y, A, B, k_x, k_y, k, h)
+Phys = Geometrical(W,U,V,Psi_x, Psi_y, A,B,k_x,k_y, k,h)
 print(W)
 #123
